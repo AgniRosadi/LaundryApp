@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
         padding: 17,
-        marginHorizontal: 40,
+        marginHorizontal: 30,
         borderRadius: 10,
         shadowColor: '#000',
         shadowOffset: {
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 8,
-        marginTop: -windowHeight * 0.05,
+        marginTop: -windowHeight * 0.07,
         flexDirection: 'row',
     },
     text: {

@@ -1,5 +1,6 @@
 import Logo from './logo.png'
 import backgroundSplash from './backgroundSplash.png'
 import ImageHeader from './header.png'
+import Iklan from './vocLogo.png'
 
-export { Logo, backgroundSplash, ImageHeader}
+export { Logo, backgroundSplash, ImageHeader, Iklan }

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { ImageBackground, StyleSheet, Image } from 'react-native'
+import { ImageBackground, StyleSheet, Image, View, Dimensions } from 'react-native'
 import { backgroundSplash, Logo } from '../../assets'
 
 const Splash = ({ navigation }) => {
     useEffect(() => {
-        setTimeout( () => {
+        setTimeout(() => {
             /*fungsi replace untuk menghindari tombol kembali pd device agar
              tidak kembali ke splash melainkan ke luar aplikasi, jika ingin fungsi
              kembali ke menu sebelumnya bisa menggunakan navigation*/
@@ -13,25 +13,36 @@ const Splash = ({ navigation }) => {
     }, [navigation]);
 
     return (
-        <ImageBackground source={backgroundSplash} style={styles.background}>
-            <Image source={Logo} style={styles.logo} />
-        </ImageBackground>
+        <View style={styles.container}>
+            <ImageBackground source={backgroundSplash} style={styles.background}>
+                <Image source={Logo} style={styles.logo} />
+            </ImageBackground>
+        </View>
     )
 }
 
-export default Splash
+export default Splash;
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-
-    background: {
+    container: {
         //fungsi flex agar gambar menyesuaikan frem
         flex: 1,
         //fungsi dibawah untuk kontrol image agar rapih
         alignItems: 'center',
         justifyContent: 'center'
     },
+    background: {
+        width: windowWidth,
+        height: windowHeight * 0.7,
+        marginTop: windowHeight * 0.4
+    },
     logo: {
-        width: 250,
-        height: 105
+        width: 300,
+        height: 100,
+        marginLeft: windowHeight * 0.12,
+        marginTop: windowHeight * 0.1
     }
 })

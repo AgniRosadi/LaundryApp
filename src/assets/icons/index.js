@@ -9,6 +9,10 @@ import IconGetVoc from './getVoc.svg';
 import IconSatuan from './satuan.svg';
 import IconKiloan from './kiloan.svg';
 import IconVip from './vip.svg';
+import IconExpres from './expres.svg';
+import IconKarpet from './karpet.svg';
+import IconSetrika from './setrika.svg';
+import IconAktivitasPesanan from './aktivitasPesanan.svg';
 
 export {
   IconAkun,
@@ -21,6 +25,9 @@ export {
   IconGetVoc,
   IconSatuan,
   IconKiloan,
-  IconVip
-
+  IconVip,
+  IconExpres,
+  IconKarpet,
+  IconSetrika,
+  IconAktivitasPesanan
 };
