@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import { BottomIcon } from '..';
 import { WARNA_UTAMA } from '../../utils/constant';
+import BottonIcon from '../BottonIcon';
 import Gap from '../Gap';
 
 const Saldo = () => {
@@ -13,14 +13,14 @@ const Saldo = () => {
                     <Text style={styles.valueSaldo}>Rp. 100.000</Text>
                 </View>
                 <View style={styles.text}>
-                    <Text style={styles.labelVoc}>Coupon Anda :</Text>
-                    <Text style={styles.valueVoc}>1 Coupon</Text>
+                    <Text style={styles.labelVoc}>Voucher Anda :</Text>
+                    <Text style={styles.valueVoc}>1 Voucher</Text>
                 </View>
             </View>
             <View style={styles.buttonAksi}>
-                <BottomIcon title="Add Saldo" />
+                <BottonIcon title="Add Saldo" />
                 <Gap width={5} />
-                <BottomIcon title="Get Voc" />
+                <BottonIcon title="Get Voc" />
             </View>
         </View>
     );

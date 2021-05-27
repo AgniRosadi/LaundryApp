@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Dimensions, View, Image, Text, ScrollView } from 'react-native'
 import { ImageHeader, Logo } from '../../assets'
-import { BottomIcon, Pesanan, Promo, Saldo } from '../../components/'
+import { BottonIcon, Pesanan, Promo, Saldo } from '../../components/'
 import { WARNA_ABU_ABU } from '../../utils/constant';
 
 const Home = () => {
@@ -19,12 +19,12 @@ const Home = () => {
                 <View style={styles.layanan}>
                     <Text style={styles.label}>Layanan Kami</Text>
                     <View style={styles.iconLayanan}>
-                        <BottomIcon title="Kiloan" type="layanan" />
-                        <BottomIcon title="Satuan" type="layanan" />
-                        <BottomIcon title="Vip" type="layanan" />
-                        <BottomIcon title="Karpet" type="layanan" />
-                        <BottomIcon title="Setrika Saja" type="layanan" />
-                        <BottomIcon title="Expres" type="layanan" />
+                        <BottonIcon title="Kiloan" type="layanan" />
+                        <BottonIcon title="Satuan" type="layanan" />
+                        <BottonIcon title="Vip" type="layanan" />
+                        <BottonIcon title="Karpet" type="layanan" />
+                        <BottonIcon title="Setrika Saja" type="layanan" />
+                        <BottonIcon title="Expres" type="layanan" />
                     </View>
                 </View>
                 <Promo />

@@ -1,21 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native'
-import { IconAktivitasPesanan } from '../../assets'
-import { WARNA_ABU_ABU, WARNA_BERHASIL, WARNA_WARNING } from '../../utils/constant'
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native'
+import { IconGetVoc } from '../../assets'
 
-const Pesanan = ({ title, status }) => {
+const Voucher = () => {
     return (
         <TouchableOpacity style={styles.container}>
-            <IconAktivitasPesanan />
+            <IconGetVoc />
             <View style={styles.text}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.status(status)}>{status}</Text>
+                <Text style={styles.title}>Gunakan Voucher</Text>
             </View>
         </TouchableOpacity >
     )
 }
 
-export default Pesanan;
+export default Voucher;
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 4.65,
         elevation: 8,
-        padding: 17,
+        padding: 10,
         marginVertical: windowHeight * 0.02,
         alignItems: 'center'
     },
@@ -44,9 +42,4 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'TitilliumWeb-SemiBold'
     },
-    status: (status) => ({
-        fontSize: 14,
-        fontFamily: 'TitilliumWeb-Light',
-        color: status === 'Sudah Selesai' ? WARNA_BERHASIL : status === 'Masih Dicuci' ? WARNA_WARNING : WARNA_ABU_ABU
-    })
 })

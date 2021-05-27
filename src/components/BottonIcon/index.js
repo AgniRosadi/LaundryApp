@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { IconAddSaldo, IconGetVoc, IconKiloan, IconExpres, IconKarpet, IconSatuan, IconVip, IconSetrika } from '../../assets';
+import { IconAddSaldo, IconGetVoc, IconKiloan, IconBaju, IconKemeja, IconExpres, IconKarpet, IconSatuan, IconVip, IconSetrika } from '../../assets';
 import { WARNA_SEKUNDER } from '../../utils/constant';
 
 const BottonIcon = ({ title, type }) => {
@@ -23,8 +23,6 @@ const BottonIcon = ({ title, type }) => {
         if (title === "Expres") return <IconExpres />
 
 
-
-        return <IconAddSaldo />
     };
     return (
         <TouchableOpacity style={styles.container(type)}>
