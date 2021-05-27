@@ -43,7 +43,7 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     bayar: {
         backgroundColor: WARNA_BERHASIL,
-        borderRadius: 10,
+        borderRadius: 10,git 
         padding: 10,
         marginVertical: windowHeight * 0.01,
     },
