@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, TouchableOpacity, Alert } from 'react-native'
 import { IconLine } from '../../assets/icons'
 import { WARNA_ABU_ABU, WARNA_BERHASIL } from '../../utils/constant'
 
@@ -28,7 +28,17 @@ const Pemabayaran = () => {
                 <Text style={styles.harga}>Total Pembayaran :</Text>
                 <Text style={styles.harga}>Rp. 80.000</Text>
             </View>
-            <TouchableOpacity style={styles.bayar}>
+            <TouchableOpacity style={styles.bayar} onPress={() =>
+                // Alert with postive negative button
+                Alert.alert(
+                    'Terimkasih',
+                    'Silahkan lakukan pembayaran sebelum jam 10.34 am',
+                    [
+                        { text: 'Tutup', onPress: () => console.log('OK Pressed') },
+                    ],
+                    { cancelable: false },
+                )
+            } >
                 <Text style={styles.tekan}>Bayar Sekarang</Text>
             </TouchableOpacity>
         </View >
@@ -43,7 +53,7 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
     bayar: {
         backgroundColor: WARNA_BERHASIL,
-        borderRadius: 10,git 
+        borderRadius: 10,
         padding: 10,
         marginVertical: windowHeight * 0.01,
     },

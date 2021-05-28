@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native'
 import Gap from '../Gap';
 import { IconBaju, IconMinus, IconAdd, IconJaket, IconCelana, IconKemeja, IconJas } from '../../assets';
 
-const Transaksi = ({ title, harga }) => {
+const Transaksi = ({ title, harga, props }) => {
+    const [totalProduct, setTotalProduct] = useState(0);
     const Icon = () => {
         if (title === "Baju") return <IconBaju />
 
@@ -25,11 +26,11 @@ const Transaksi = ({ title, harga }) => {
                 <Text style={styles.harga}>{harga}</Text>
             </View>
             <View style={styles.list}>
-                <TouchableOpacity><IconMinus /></TouchableOpacity>
+                <TouchableOpacity onPress={() => setTotalProduct(totalProduct - 1)}><IconMinus /></TouchableOpacity>
                 <Gap width={5} />
-                <Text style={styles.label}> 0 </Text>
+                <Text style={styles.label} >{totalProduct}</Text>
                 <Gap width={5} />
-                <TouchableOpacity><IconAdd /></TouchableOpacity>
+                <TouchableOpacity onPress={() => setTotalProduct(totalProduct + 1)} ><IconAdd /></TouchableOpacity>
             </View>
         </View >
     )

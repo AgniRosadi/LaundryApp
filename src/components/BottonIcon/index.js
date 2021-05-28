@@ -22,7 +22,7 @@ const BottonIcon = ({ title, type }) => {
 
         if (title === "Expres") return <IconExpres />
 
-
+        return <IconAddSaldo />
     };
     return (
         <TouchableOpacity style={styles.container(type)}>
